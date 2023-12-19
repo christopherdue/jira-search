@@ -1,0 +1,6 @@
+{
+  "extends": "@wix/serverless-tsc-config/tsconfig.eslint.json",
+  "include": [
+    "**/*.*"
+  ]
+}
