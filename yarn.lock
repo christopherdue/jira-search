@@ -4915,6 +4915,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wix/ambassador-ds-wix-ai-gateway-v1-prompt@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@wix/ambassador-ds-wix-ai-gateway-v1-prompt@npm:1.0.31::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fambassador-ds-wix-ai-gateway-v1-prompt%2F-%2F%40wix%2Fambassador-ds-wix-ai-gateway-v1-prompt-1.0.31.tgz"
+  dependencies:
+    "@wix/auto-crud": "npm:^1.0.0"
+    "@wix/http-client": "npm:^1.0.0"
+    "@wix/metro-common-builders": "npm:^1.0.0"
+    "@wix/metro-runtime": "npm:^1.0.0"
+    callsite: "npm:^1.0.0"
+    joi: "npm:^17.0.0"
+  checksum: af7a95e972c0d64f83b75fefbb8258a054254c2e96a8bf9e1afae4ee974c29bc641b5548759b09f436747320f44ea650b4c9dbf697d1ab015824668b28e05427
+  languageName: node
+  linkType: hard
+
 "@wix/ambassador-editor-document-store@npm:^3.0.455":
   version: 3.0.455
   resolution: "@wix/ambassador-editor-document-store@npm:3.0.455::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fambassador-editor-document-store%2F-%2F%40wix%2Fambassador-editor-document-store-3.0.455.tgz"
@@ -6332,6 +6346,7 @@ __metadata:
   dependencies:
     "@types/jest": "npm:~28.1.3"
     "@types/node": "npm:^16.11.56"
+    "@wix/ambassador-ds-wix-ai-gateway-v1-prompt": "npm:^1.0.31"
     "@wix/http-client": "npm:^1.483.0"
     "@wix/serverless-api": "npm:^1.36.0"
     "@wix/serverless-eslint-config": "npm:^3.0.0"

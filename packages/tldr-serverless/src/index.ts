@@ -1,7 +1,6 @@
 import type { FunctionsBuilder } from '@wix/serverless-api';
-import { FullHttpResponse } from '@wix/serverless-api';
-
+import {requestPrompt} from './api/prompt-ai'
 module.exports = function builder (builder: FunctionsBuilder) {
   return builder
-    .addWebFunction('GET', '/hello', async () => new FullHttpResponse({ status: 200, body: 'hello, serverless' }));
+  .addWebFunction('POST', '/prompt', requestPrompt)
 };

@@ -13,9 +13,10 @@
     "clean": "rm -rf coverage dist target tsconfig.tsbuildinfo",
     "lint": "eslint --ext .js,.ts .",
     "pretest": "npm run build",
-    "test": "jest --runInBand --forceExit"
+    "test": "jest --runInBand --forceExit --detectOpenHandles"
   },
   "dependencies": {
+    "@wix/ambassador-ds-wix-ai-gateway-v1-prompt": "^1.0.31",
     "@wix/serverless-api": "^1.36.0"
   },
   "devDependencies": {
