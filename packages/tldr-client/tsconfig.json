@@ -18,8 +18,5 @@
     "./jest-yoshi.config.js",
     "./src/**/*.spec.tsx"
   ],
-  "files": [
-    "./src/external-types.d.ts",
-    "./src/client.tsx"
-  ]
+  "files": ["./src/external-types.d.ts", "./src/components/App/index.ts"]
 }

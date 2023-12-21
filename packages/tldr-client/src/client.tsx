@@ -1,11 +1,7 @@
 import React, { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
-import { I18nextProvider } from 'react-i18next';
 import { create as createFedopsLogger } from '@wix/fedops-logger';
-import i18n from './i18n';
 import App from './components/App';
-
-const locale = window.__LOCALE__;
 
 const fedopsLogger = createFedopsLogger('tldr-client');
 
@@ -17,8 +13,6 @@ const domNode = document.getElementById('root')!;
 const root = createRoot(domNode);
 root.render(
   <Suspense fallback="...loading">
-    <I18nextProvider i18n={i18n(locale)}>
-      <App />
-    </I18nextProvider>
+    <App />
   </Suspense>,
 );
