@@ -23,8 +23,12 @@ return new FullHttpResponse({
     status: 200,
     body: promptResponse,
     headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, DELETE',
+        'Access-Control-Expose-Headers': 'x-wix-request-id,x-seen-by',
+        Vary: 'Origin',
     },
   });
 
