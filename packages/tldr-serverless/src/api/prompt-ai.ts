@@ -1,6 +1,26 @@
 import { FullHttpResponse, HttpError, type FunctionContext, type WebRequest } from "@wix/serverless-api";
 import { APP_DEF_ID } from '../consts';
 import { generateTextByPrompt } from '@wix/ambassador-ds-wix-ai-gateway-v1-prompt/rpc';
+
+const preflightCorsHeaders = (origin = '*'): any => ({
+  'Access-Control-Allow-Credentials': 'true',
+  'Access-Control-Allow-Origin': origin,
+  // eslint-disable-next-line sort-keys
+  'Access-Control-Allow-Headers': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, DELETE',
+  'Access-Control-Expose-Headers': 'x-wix-request-id,x-seen-by',
+  Vary: 'Origin',
+});
+
+export const returnCorsHeaders = async (
+  _ctx: FunctionContext,
+  _req: WebRequest
+): Promise<FullHttpResponse> =>
+  new FullHttpResponse({
+      status: 204,
+      headers: preflightCorsHeaders(),
+  });
+
 export const requestPrompt = async (ctx: FunctionContext, req: WebRequest): Promise<FullHttpResponse> => {
   const s2s = ctx.getConfig('s2s');
 
